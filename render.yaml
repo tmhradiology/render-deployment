@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: dev-relay
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: CHISEL_KEY_FILE
+        sync: false
+      - key: AUTHFILE_JSON
+        sync: false
